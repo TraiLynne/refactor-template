@@ -26,24 +26,34 @@ export const DisplayToggleContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items: center;
 	background-color: white;
+`;
+
+export const ToggleButton = styled.button`
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	width: 10vw;
+	height: 95%;
+	align-self: center;
 `;
 
 export const DisplayContainer = styled.div`
 	width: 85vw;
-	height: 90vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: ${(props) => (props.isRefactored ? "green" : "red")};
+	background-color: ${({ isRefactored }) =>
+		isRefactored ? "navy" : "darkred"};
 `;
 
 export const ComponentDisplay = styled.div`
-	height: 45vh;
+	height: 35%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
-
 export const CodeDisplay = styled.div`
-	height: 45vh;
+	height: 35%;
 `;
